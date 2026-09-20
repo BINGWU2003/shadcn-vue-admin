@@ -3,6 +3,7 @@ import type { PluginOption } from 'vite'
 import tailwindcss from '@tailwindcss/vite'
 import vue from '@vitejs/plugin-vue'
 import browserslist from 'browserslist'
+import { codeInspectorPlugin } from 'code-inspector-plugin'
 import { browserslistToTargets } from 'lightningcss'
 import process from 'node:process'
 import { fileURLToPath, URL } from 'node:url'
@@ -18,6 +19,9 @@ const RouteGenerateExclude = ['**/components/**', '**/layouts/**', '**/data/**',
 
 export default defineConfig({
   plugins: [
+    codeInspectorPlugin({
+      bundler: 'vite',
+    }),
     VueRouter({
       exclude: RouteGenerateExclude,
       dts: 'src/types/route-map.d.ts',
