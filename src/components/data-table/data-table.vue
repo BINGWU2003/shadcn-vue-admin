@@ -31,13 +31,9 @@ const clientPagination = shallowRef<PaginationState>({
   pageSize: DEFAULT_PAGE_SIZE,
 })
 
-const serverRowCountOption = props.serverPagination
-  ? { rowCount: computed(() => props.serverPagination?.rowCount ?? 0) }
-  : {}
-
 const serverPaginationOptions = {
   manualPagination: computed(() => Boolean(props.serverPagination)),
-  ...serverRowCountOption,
+  rowCount: computed(() => props.serverPagination?.rowCount),
   state: computed(() => ({
     pagination: props.serverPagination?.state ?? clientPagination.value,
   })),
