@@ -10,6 +10,5 @@ shellEmulator: true
 
 allowBuilds:
   maplibre-gl: true
-  node-pty: true
   simple-git-hooks: true
   vue-demi: true

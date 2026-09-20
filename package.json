@@ -88,7 +88,6 @@
     "@vitest/coverage-v8": "^4.1.11",
     "@vue/test-utils": "^2.5.1",
     "browserslist": "^4.28.9",
-    "code-inspector-plugin": "^2.0.9",
     "eslint": "^10.10.0",
     "eslint-plugin-format": "^2.0.1",
     "happy-dom": "^20.14.5",
